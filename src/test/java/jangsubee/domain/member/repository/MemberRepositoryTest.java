@@ -18,7 +18,7 @@ class MemberRepositoryTest {
 
         Member member = Member.builder()
                 .id("STAFF1")
-                .name("임동섭")
+                .name("홍길동")
                 .memberTypeCode(MemberTypeEnum.TEAM_MEMBER)
                 .startDate("20210227")
                 .endDate("99991231")
@@ -27,8 +27,6 @@ class MemberRepositoryTest {
 
         Member savedMember = memberRepository.save(member);
 
-        Member findMember = memberRepository.findById(savedMember.getId()).get();
-
-        Assertions.assertThat(findMember.getId()).isEqualTo(member.getId());
+        memberRepository.findById(savedMember.getId()).ifPresent(findMember -> Assertions.assertThat(findMember.getId()).isEqualTo(member.getId()));
     }
 }

@@ -34,7 +34,7 @@ class ScheduleServiceTest {
         // given
         MemberJoinIn memberJoinIn = new MemberJoinIn(
                 "STAFF1",
-                "임동섭",
+                "홍길동",
                 MemberTypeEnum.TEAM_MEMBER,
                 "20210314",
                 "99991231",
