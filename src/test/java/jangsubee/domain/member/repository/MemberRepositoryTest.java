@@ -14,7 +14,7 @@ class MemberRepositoryTest {
     MemberRepository memberRepository;
 
     @Test
-    public void testMember() {
+    public void saveMember() {
 
         Member member = Member.builder()
                 .id("STAFF1")
